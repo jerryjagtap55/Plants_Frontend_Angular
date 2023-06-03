@@ -4,6 +4,7 @@ import { HomepageComponent } from './pages/homepage/homepage.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { ProductDetailPageComponent } from './pages/product-detail-page/product-detail-page.component';
+import { TestComponent } from './pages/test/test.component';
 
 const routes: Routes = [
   {
@@ -22,14 +23,21 @@ const routes: Routes = [
     component: ProductPageComponent
   },
   {
-    path: 'detail/:plantid',
+    path: 'detail/:id',
     component: ProductDetailPageComponent
   },
+  {
+    path: 'test',
+    component: TestComponent
+  }
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled', // TO MAKE SURE when navigate on start of page
+  })
+],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,7 +1,9 @@
 <!-- Hero section -->
 <section class="w-full bg-primary200 m-0">
-    <div class="m-auto py-24 max-w-7xl h-full grid sm:grid-cols-1 sm:gap-0 md:grid-cols-2 md:gap-2 lg:gap-3 items-center text-center md:text-left">
-        <div class="mx-auto px-6 md:p-12 grid grid-cols-1 gap-4 items-center md:max-w-sm lg:max-w-2xl md:pr-0">
+    <div
+        class="m-auto py-24 max-w-7xl h-full grid sm:grid-cols-1 sm:gap-0 md:grid-cols-2 md:gap-2 lg:gap-3 items-center text-center md:text-left">
+        <div @fadeInRight
+            class="mx-auto px-6 md:p-12 grid grid-cols-1 gap-4 items-center md:max-w-sm lg:max-w-2xl md:pr-0">
             <h4 class="text-sm font-semibold text-primary550 opacity-95 font-dm-serif">
                 Plants
             </h4>
@@ -17,14 +19,14 @@
                     $150.00
                 </p>
                 <p>
-                   $99.99
+                    $99.99
                 </p>
                 <div class="mx-4">
                     <app-primary-button></app-primary-button>
                 </div>
             </div>
         </div>
-        <div class="mx-auto px-6 md:p-12 items-center md:max-w-sm lg:max-w-2xl md:pl-0">
+        <div @fadeInLeft class="mx-auto px-6 md:p-12 items-center md:max-w-sm lg:max-w-2xl md:pl-0">
             <img src="../../../assets/Images/hero.png" alt="Hero Image">
         </div>
     </div>

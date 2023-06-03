@@ -36,6 +36,7 @@ import { BtnReadComponent } from './component/btn-read/btn-read.component';
 import { ReviewComponent } from './component/review/review.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { ProductDetailPageComponent } from './pages/product-detail-page/product-detail-page.component';
+import { TestComponent } from './pages/test/test.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ProductDetailPageComponent } from './pages/product-detail-page/product-
     BtnReadComponent,
     ReviewComponent,
     ProductPageComponent,
-    ProductDetailPageComponent
+    ProductDetailPageComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
