@@ -1,7 +1,7 @@
 <!-- Special Offers -->
-<section class="w-full m-0">
+<section id="special-offer" class="w-full m-0">
     <div class="m-auto pt-8 md:pt-16 lg:pt-24 max-w-7xl h-full items-center text-center mb-4">
-        <div class="m-4">
+        <div class="m-4 heading">
             <h4 class="text-sm font-semibold text-primary550 opacity-95 font-dm-serif m-4">
                 Special offers
             </h4>
@@ -9,11 +9,12 @@
                 Unique deals & offers every single day
             </h2>
         </div>
-        <div class="my-8 md:my-16 lg:my-24 flex flex-row items-center justify-around flex-wrap">
-            <div class="">
+        <div id="special-offer-image"
+        class="my-8 md:my-16 lg:my-24 flex flex-row items-center justify-around flex-wrap">
+            <div class="firstImage">
                 <img class="max-h-fit" src="../../../assets/Images/specialOffers_1.png" alt="Plant Image">
             </div>
-            <div>
+            <div class="product-card">
                 <app-product-card [plants]="plants"></app-product-card>
             </div>
         </div>

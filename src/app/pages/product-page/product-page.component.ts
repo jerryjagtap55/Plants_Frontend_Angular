@@ -1,5 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { fadeIn, fadeInUp } from 'src/app/animations/fade';
+
+// Gsap
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 
 @Component({
   selector: 'app-product-page',
@@ -9,7 +17,7 @@ import { fadeIn, fadeInUp } from 'src/app/animations/fade';
     fadeIn
   ]
 })
-export class ProductPageComponent implements OnInit {
+export class ProductPageComponent implements OnInit, AfterViewInit {
 
   plants: any[] = [
     {
@@ -73,5 +81,39 @@ export class ProductPageComponent implements OnInit {
   ngOnInit() {
 
   }
+
+
+  initScrollTrigger(): void {
+
+    let target = document.querySelectorAll(".shopCard ")[0];
+
+    let mm = gsap.matchMedia();
+    mm.add("(max-width: 640px)", () => { //for small screen
+
+      let tlProduct = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#shop",
+          start: "0% 60%",
+          end: "100% 90%",
+          scrub: true,
+          //markers: true,
+          id: "tlProduct",
+        }
+      });
+      tlProduct
+        .from(target.children, { opacity: 0, stagger:0.5 })
+       
+
+    });
+    //Timeline
+   
+      
+
+  }
+
+  ngAfterViewInit() {
+    this.initScrollTrigger();
+  }
+
 
 }

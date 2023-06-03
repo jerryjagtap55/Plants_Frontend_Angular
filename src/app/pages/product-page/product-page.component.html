@@ -1,14 +1,14 @@
 <div class="bg-primary200 p-8">
-    <div @fadeIn
+    <div @fadeIn id="shop"
     class="max-w-7xl bg-white m-auto">
-        <div class=" mt-16 md:mt-24 lg:mt-32">
+        <div class="mt-16 md:mt-24 lg:mt-32">
             <h2 class="text-xl md:text-2xl lg:text-4xl text-primary600 px-12 md:px-16 xl:px-24 pt-10">
                 Shop
             </h2>
         </div>
-        <div class="m-4 p-4 ">
+        <div class="m-4 p-4">
             <app-product-card [plants]="plants"
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8"></app-product-card>
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 shopCard"></app-product-card>
         </div>
         <div class="p-8 md:p-16">
             <h5 class="py-4 px-8 text-center text-lg font-medium w-fit m-auto border capitalize ">

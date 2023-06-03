@@ -17,36 +17,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   `
 })
 
-export class AppComponent implements AfterViewInit{
+export class AppComponent{
   
-
-  initScrollTrigger(): void {
-    gsap.set(".test ",{
-      opacity: 0,
-      scale: 0.3,
-    });
-
-    //Timeline
-    let tl = gsap.timeline({
-      scrollTrigger:{
-        trigger: "#test",
-        start: "100% 80%",
-        end: "100% 60%",
-        scrub: true,
-        markers: true,
-        id: "test",
-      }
-    });
-
-    tl
-    .to(".test", {opacity:1, scale: 1});
-
-    
-  }
-  
-  ngAfterViewInit() {
-   this.initScrollTrigger();
-  }
   title = 'Nish Plants';
   
 }

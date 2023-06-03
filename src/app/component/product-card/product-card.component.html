@@ -1,5 +1,5 @@
 <!-- Product Card-->
-<div class="" *ngFor="let plant of plants">
+<div class="PlantsCard" *ngFor="let plant of plants">
     <a routerLink="/detail/{{plant?.id}}" routerLinkActive="detail">
         <div class="h-auto w-64 sm:w-72 md:w-72 lg:w-80 p-4 m-auto">
             <img class="object-cover h-fit" src="../../../assets/Images/{{plant.img}}" alt="Product-img">
