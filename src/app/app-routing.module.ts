@@ -7,12 +7,13 @@ import { ProductDetailPageComponent } from './pages/product-detail-page/product-
 import { TestComponent } from './pages/test/test.component';
 
 const routes: Routes = [
+ 
+  {
+    path: '', redirectTo: 'home', pathMatch: 'full'
+  },
   {
     path: 'home',
     component: HomepageComponent
-  },
-  {
-    path: '', redirectTo: 'home', pathMatch: 'full'
   },
   {
     path: 'about',
@@ -25,10 +26,6 @@ const routes: Routes = [
   {
     path: 'detail/:id',
     component: ProductDetailPageComponent
-  },
-  {
-    path: 'test',
-    component: TestComponent
   }
 
 ];
